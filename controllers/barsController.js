@@ -15,7 +15,14 @@ module.exports =  {
     },
 
     create: function(req,res,next){
-
+        let data = req.body;
+        Bar.create({
+            name: data.name,
+            location: data.location
+        }, function(err){
+            if (err) return next(err);
+            res.redirect('/bars')
+        })
     },
 
     show: function(req,res,next){
