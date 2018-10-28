@@ -2,7 +2,7 @@
     
     <h1><%= beer.name %></h1>
 
-    <h3>Being served at:</h3>
+    <h3>Currently being served at:</h3>
 
     <% beer.bars.forEach(function(bar){ %>
         <a href="/bars/<%= bar._id %>"><p><%= bar.name %></p></a> 

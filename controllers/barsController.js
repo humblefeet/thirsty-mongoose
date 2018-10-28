@@ -62,6 +62,7 @@ module.exports =  {
                     if(err)return next(err);
                     beer.bars.remove(bar._id);
                     beer.save(function(err){
+                        if(err) return next(err);
                         res.redirect('/bars/'+bar._id);
                     })
                 })
