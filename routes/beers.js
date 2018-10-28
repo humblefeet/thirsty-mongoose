@@ -10,7 +10,7 @@ router.get('/:id', beers.show);
 
 router.post('/', beers.create);
 
-router.post('/:id/comment', beers.addComment);
+router.post('/:id/comments', beers.addComment);
 
 router.delete('/:id', beers.destroy);
 
