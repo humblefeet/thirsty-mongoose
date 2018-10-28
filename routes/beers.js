@@ -10,6 +10,8 @@ router.get('/:id', beers.show);
 
 router.post('/', beers.create);
 
+router.post('/:id/comment', beers.addComment);
+
 router.delete('/:id', beers.destroy);
 
 module.exports = router;

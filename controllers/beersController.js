@@ -34,6 +34,18 @@ module.exports =  {
         });
     },
 
+    addComment: function(req,res,next){
+        let data = req.body;
+        Beer.findById(req.params.id, function(err, beer){
+            if(err) return next(err);
+            beer.comments.push(data.comment);
+            beer.save(function(err){
+                if(err) return next(err);
+                res.redirect('./');
+            })
+        })
+    },
+
     destroy: function(req,res,next){
         Beer.remove({_id: req.params.id}, function(err){
             if(err)return next(err);

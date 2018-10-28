@@ -10,7 +10,7 @@
     <h3>Available Beers:</h3>
         <br>
     <% bar.beers.forEach(function(beer){ %>
-        <p><a href="../beers/<%= beer._id %>"> <%= beer.name %></a> 
+        <p><a href="/beers/<%= beer._id %>"> <%= beer.name %></a> 
             <a href="/bars/<%= bar._id%>/beers/<%= beer._id%>/remove">
                 <button type="submit">X</button>
             </a>
