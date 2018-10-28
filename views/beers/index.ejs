@@ -3,10 +3,12 @@
     <h4>Add a new beer <a href="./new">HERE</a> </h4>
 
     <% beers.forEach(function(beer){ %>
-        <div>
-            <h5><%= beer.name %></h5>
-            <p>Style: <%= beer.style%></p>
-        </div>
+        <a href="/beers/<%= beer._id%>">
+            <div>
+                <h3><%= beer.name %></h3>
+                <p>Style: <%= beer.style%></p>
+            </div>
+        </a>
     <% }); %>
 
 <%- include('../partials/footer') %>

@@ -3,10 +3,12 @@
     <h4>Add a new bar <a href="./new">HERE</a> </h4>
 
     <% bars.forEach(function(bar){ %>
-        <div>
-            <h5><%= bar.name %></h5>
-            <p>Location: <%= bar.location%></p>
-        </div>
+        <a href="/bars/<%=bar._id%>/">
+            <div>
+                <h3><%= bar.name %></h3>
+                <p>Location: <%= bar.location%></p>
+            </div>
+        </a> 
     <% }); %>
 
 <%- include('../partials/footer') %>
