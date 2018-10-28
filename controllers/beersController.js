@@ -37,7 +37,7 @@ module.exports =  {
     destroy: function(req,res,next){
         Beer.remove({_id: req.params.id}, function(err){
             if(err)return next(err);
-            res.redirect('/beers')
+            res.redirect('/beers');
         })
     }
 

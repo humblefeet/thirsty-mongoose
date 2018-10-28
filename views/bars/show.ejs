@@ -14,11 +14,11 @@
     <% }); %>
     </div>
 
-    <label for="add">Add a beer to this bar</label>
-    <form action="/bars/<%= bar._id%>/" method="POST">
-        <select name="beers" id="beers">
+    <label>Add a beer to this bar</label>
+    <form action="/bars/<%= bar._id%>/beers" method="POST">
+        <select name="beer">
             <% beers.forEach(function(beer) { %>
-                <option value="<%= beer.name %>"><%= beer.name %></option>
+                <option value="<%= beer._id %>"> <%= beer.name %>  </option>
             <% }); %>
         </select>
         <input type="submit" value="Add">

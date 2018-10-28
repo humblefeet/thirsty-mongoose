@@ -45,7 +45,7 @@ module.exports =  {
                     beer.bars.push(bar);
                     beer.save(function(err){
                         if(err)return next(err);
-                        res.redirect('/bars');
+                        res.redirect('./');
                     })
                 });
             })

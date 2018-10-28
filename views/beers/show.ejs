@@ -1,16 +1,16 @@
 <%- include('../partials/header') %>
     
-    <h1><%= beer.name%></h1>
+    <h1><%= beer.name %></h1>
 
     <h3>Being served at:</h3>
 
     <% beer.bars.forEach(function(bar){ %>
-        <p><%= bar.name %></p>
+        <a href="/bars/<%= bar._id %>"><p><%= bar.name %></p></a> 
     <% }); %>
 
     <hr>
     <form action="/beers/<%=beer._id%>?_method=DELETE" method="POST" >
         <button  type="submit">Delete Beer</button>
     </form>
-    
+
 <%- include('../partials/footer') %>
