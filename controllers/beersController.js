@@ -29,13 +29,16 @@ module.exports =  {
         Beer.findById(req.params.id).populate('bars').exec(function(err,beer){
             if(err)return next(err);
             Bar.find({}, function(err,bars){
-                res.render('beers/show',{beer, bar});
+                res.render('beers/show',{beer, bars});
             });
         });
     },
 
     destroy: function(req,res,next){
-
+        Beer.remove({_id: req.params.id}, function(err){
+            if(err)return next(err);
+            res.redirect('/beers')
+        })
     }
 
 }
