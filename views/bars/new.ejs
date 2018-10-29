@@ -1,16 +1,17 @@
 <%- include('../partials/header') %>
-    <h1>Add a Bar</h1>
-
-    <main>
-        <form action="/bars" method="POST">
-            <label for="name">Name</label>
-            <input type="text" name="name">
-                <br>
-            <label for="style">Location</label>
-            <input type="text" name="location">
-                <br>
-            <input type="submit" value="Add Bar">
-        </form>
+    <main class="new">
+        <h1>Add a Bar</h1>
+        <div>
+            <form class="add" action="/bars" method="POST">
+                <label for="name">Name</label>
+                <input type="text" name="name">
+                    <br>
+                <label for="style">Location</label>
+                <input type="text" name="location">
+                    <br>
+                <input type="submit" value="Add Bar">
+            </form>
+        </div>
     </main>
 
 

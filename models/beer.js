@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var commentsSchema = new Schema({
-    comments: String
+    comment: String
 });
 
 var beerSchema = new Schema({

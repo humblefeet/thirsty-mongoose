@@ -28,6 +28,7 @@ module.exports =  {
     show: function(req,res,next){
         Beer.findById(req.params.id).populate('bars').exec(function(err,beer){
             if(err)return next(err);
+            console.log(beer.comments);
             Bar.find({}, function(err,bars){
                 res.render('beers/show',{beer, bars});
             });

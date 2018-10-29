@@ -5,14 +5,12 @@
     <form action="/beers/<%=beer._id%>?_method=DELETE" method="POST" >
         <button  type="submit">Delete Beer</button>
     </form>
-    <hr>
 
     <h3>Currently being served at:</h3>
 
     <% beer.bars.forEach(function(bar){ %>
         <a href="/bars/<%= bar._id %>"><p><%= bar.name %></p></a> 
     <% }); %>
-    <hr>
 
     <h4>Comments</h4>
 
@@ -21,6 +19,7 @@
         <% beer.comments.forEach(function(comment){ %>
             <li>
                 <p> <%= comment.comment %></p>
+                <p><%= comment._id.getTimestamp() %></p>
                 <br>
             </li>
         <% }) %>
@@ -32,7 +31,6 @@
         <button type="submit">Add Comment</button>
     </form>
 
-    <hr>
 
 
 

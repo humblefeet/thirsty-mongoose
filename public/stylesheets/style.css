@@ -13,10 +13,13 @@ a {
 }
 
 div{
+  display: block;
+  clear: center;
   border: 3px black solid;
   border-radius: 15px;
+  padding: 1% 2%;
+  width: 300px;
   margin: 5px;
-  padding: 2% 5%;
   color: black;
   background-color: rgb(225, 246, 254);
 }
@@ -29,6 +32,15 @@ h1{
   color: #00B7FF;
   font-size: 2rem;
   display: inline-block;
+}
+h3{
+  color: white;
+}
+div h3{
+  color: black
+}
+form{
+  margin: 2% 10%;
 }
 
 nav {
@@ -66,13 +78,15 @@ nav .brand {
   font-family: 'Griffy', cursive;
   font-size: 4em;
   text-align: center;
-  color: white;
+  color: rgb(12, 121, 179);
 }
 
 .add{
-  display: inline;
+  display: inline-block;
   background-color: rgb(225, 246, 254);
   padding: 1%;
-  border: 3px black solid;
   border-radius: 15px;
+}
+.new{
+  padding: 15px 20% 5px 3px;
 }
