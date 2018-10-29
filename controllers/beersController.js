@@ -38,7 +38,7 @@ module.exports =  {
     addComment: function(req,res,next){
         Beer.findById(req.params.id, function(err, beer){
             let newComment = {
-                comment: req.body.comment
+                content: req.body.comment
             }
             beer.comments.push(newComment);
             beer.save(function(err){

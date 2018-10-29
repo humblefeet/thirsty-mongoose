@@ -18,7 +18,7 @@
         <ul>
         <% beer.comments.forEach(function(comment){ %>
             <li>
-                <p> <%= comment.comment %></p>
+                <p> <%= comment.content %></p>
                 <p><%= comment._id.getTimestamp() %></p>
                 <br>
             </li>
