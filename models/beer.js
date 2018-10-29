@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 
+
 var Schema = mongoose.Schema;
 
 var commentsSchema = new Schema({
@@ -14,6 +15,5 @@ var beerSchema = new Schema({
 },{
     timestamps: true
 });
-
 
 module.exports = mongoose.model('Beer', beerSchema);

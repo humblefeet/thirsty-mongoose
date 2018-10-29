@@ -17,9 +17,14 @@
     <h4>Comments</h4>
 
     <div>
-    <% beer.comments.forEach(function(comment){ %>
-        <p><%= comment %></p>
-    <% }) %>
+        <ul>
+        <% beer.comments.forEach(function(comment){ %>
+            <li>
+                <p> <%= comment.comment %></p>
+                <br>
+            </li>
+        <% }) %>
+        </ul>
     </div>
 
     <form method='POST' action="/beers/<%= beer._id %>/comments">

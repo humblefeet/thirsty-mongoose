@@ -35,13 +35,14 @@ module.exports =  {
     },
 
     addComment: function(req,res,next){
-        let data = req.body;
         Beer.findById(req.params.id, function(err, beer){
-            if(err) return next(err);
-            beer.comments.push(data.comment);
+            let newComment = {
+                comment: req.body.comment
+            }
+            beer.comments.push(newComment);
             beer.save(function(err){
                 if(err) return next(err);
-                res.redirect('./');
+                res.redirect('/beers/'+beer._id);
             })
         })
     },

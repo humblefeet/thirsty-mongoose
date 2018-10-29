@@ -2,6 +2,9 @@ body {
   padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -15,11 +18,17 @@ div{
   margin: 5px;
   padding: 2% 5%;
   color: black;
-
+  background-color: rgb(225, 246, 254);
 }
 
 main{
-  margin: 10%;
+  margin: 7% 15%;;
+}
+
+h1{
+  color: #00B7FF;
+  font-size: 2rem;
+  display: inline-block;
 }
 
 nav {
@@ -57,4 +66,13 @@ nav .brand {
   font-family: 'Griffy', cursive;
   font-size: 4em;
   text-align: center;
+  color: white;
+}
+
+.add{
+  display: inline;
+  background-color: rgb(225, 246, 254);
+  padding: 1%;
+  border: 3px black solid;
+  border-radius: 15px;
 }

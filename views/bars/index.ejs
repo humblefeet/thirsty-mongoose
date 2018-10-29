@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
     <h1>All Bars</h1>
-    <h4>Add a new bar <a href="./new">HERE</a> </h4>
+    <a href="./new"><h4 class="add">Add a new bar</h4></a>
 
     <% bars.forEach(function(bar){ %>
         <a href="/bars/<%=bar._id%>/">
